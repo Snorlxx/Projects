@@ -1,0 +1,43 @@
+tabcontent {
+    color: black;
+    padding: 10px 80px;
+    height: 100%;
+}
+
+#MyProfile {
+    /*background-image: linear-gradient(rgb(237, 240, 250), #E2E2E2);*/
+}
+
+.sizeup {
+    font-size: 30px;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    width: 80%;
+    border: 1px solid black;
+}
+
+#customers td,
+#customers th {
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: #555;
+}

@@ -1,0 +1,39 @@
+.tabcontent {
+    color: black;
+    padding: 10px 8px;
+    height: 100%;
+}
+
+
+.sizeup {
+    font-size: 30px;
+}
+
+
+#ActivePlans {
+   /* background-image: linear-gradient(#C9D6FF, #E2E2E2);*/
+}
+
+
+.card {
+    display: inline-block;
+    width: 230px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.headerr {
+    background-color: #4CAF50;
+    color: white;
+    height: 150px;
+    vertical-align: center;
+    padding: 7px;
+    padding-top: 30px;
+    font-size: 14px;
+}
+
+.containerr {
+    font-size: 20px;
+    padding: 3px;
+}

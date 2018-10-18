@@ -1,0 +1,42 @@
+.tabcontent {
+    color: black;
+    padding: 10px 6px;
+    height: 100%;
+}
+
+.sizeup {
+    font-size: 30px;
+}
+
+#billing {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#billing td,
+#billing th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.stylebutton {
+    background-color: rgb(64, 171, 243);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#styleselect {
+    width: 170px;
+    height: 40px;
+}
