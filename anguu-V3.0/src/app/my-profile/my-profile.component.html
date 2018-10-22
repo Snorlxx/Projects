@@ -1,0 +1,89 @@
+<div id="MyProfile" class="tabcontent">
+    <div id="maincontent">
+        <h3 class="display-4">Personal and Contact Details</h3>
+
+        <br/>
+        <h5>PRIMARY CONTACT DETAILS </h5>
+        <br/>
+        <table class="table table-hover table-dark">
+            <tr>
+                <th>Title:</th>
+                <td>{{myaccountinfo.title}}</td>
+            </tr>
+            <tr>
+                <th>FirstName:</th>
+                <td>{{myaccountinfo.firstname}}</td>
+            </tr>
+            <tr>
+                <th>MiddleName:</th>
+                <td>{{myaccountinfo.middlename}}</td>
+            </tr>
+            <tr>
+                <th>LastName:</th>
+                <td>{{myaccountinfo.lastname}}</td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>{{myaccountinfo.gender}}</td>
+            </tr>
+            <tr>
+                <th>Registered Mobile Number(RMN):</th>
+                <td>{{myaccountinfo.rmn}}</td>
+            </tr>
+            <tr>
+                <th>Contact:</th>
+                <td>{{myaccountinfo.contact}}</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>{{myaccountinfo.email}}</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <h5>ADDRESS DETAILS</h5>
+        <br>
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>FlatNo.</th>
+                <td>{{myaccountinfo.address.flatNo}}</td>
+            </tr>
+            <tr>
+                <th>Landmark:</th>
+                <td>{{myaccountinfo.address.landmark}}</td>
+            </tr>
+            <tr>
+                <th>Location:</th>
+                <td>{{myaccountinfo.address.location}}</td>
+            </tr>
+            <tr>
+                <th>Building Name:</th>
+                <td>{{myaccountinfo.address.building}}</td>
+            </tr>
+            <tr>
+                <th>District:</th>
+                <td>{{myaccountinfo.address.district}}</td>
+            </tr>
+            <tr>
+                <th>City:</th>
+                <td>{{myaccountinfo.address.city}}</td>
+            </tr>
+            <tr>
+                <th>State:</th>
+                <td>{{myaccountinfo.address.state}}</td>
+            </tr>
+
+            <tr>
+                <th>Country:</th>
+                <td>{{myaccountinfo.address.country}}</td>
+            </tr>
+            <tr>
+                <th>Postal Code:</th>
+                <td>{{myaccountinfo.address.pincode}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-3 float-right">
+            <a href="/ed/{{myaccountinfo.rmn}}" class="btn btn-primary btn-lg btn-block btn-lg mb-5">Edit</a>
+          </div>
+</div>

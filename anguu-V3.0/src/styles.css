@@ -1,0 +1,196 @@
+/*
+*{
+    box-sizing: border-box;
+    margin:5px;
+    padding:10px;
+}
+
+body{
+    background-color: aquamarine;
+}
+header,footer{
+    min-height: 50px;
+    background-color: rgb(62, 216, 195);
+    color:black;
+}
+
+header{
+    margin-bottom:0px;
+    font-size: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+footer{
+    margin-top:0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav{
+    min-height: 80px;
+    background-color:rgb(204, 204, 204); 
+    color:#ffffff;
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+main{
+    min-height:250px;
+    background-color: rgb(247, 242, 242);
+    margin-bottom:0px;
+    margin-top:0px;
+}
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    background-color: rgb(191, 245, 105);
+    border-radius:4px;
+}
+
+
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tablink {
+    background-color: #555;
+    color: rgb(255, 255, 255);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 14px;
+    font-size: 17px;
+    width: 20%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+.tabcontent {
+    color: black;
+    padding: 60px 10px;
+    height: 100%;
+}
+
+#MyProfile {
+    background-image: linear-gradient(#C9D6FF, #E2E2E2);
+}
+
+
+.sizeup {
+    font-size: 30px;
+}
+
+#ActivePlans {
+    background-image: linear-gradient(#C9D6FF, #E2E2E2);
+}
+
+#MonthlyBilling {
+    background-image: linear-gradient(#C9D6FF, #E2E2E2);
+}
+
+#PaymentDetails {
+    background-image: linear-gradient(#C9D6FF, #E2E2E2);
+}
+
+#billing {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#billing td,
+#billing th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    width: 80%;
+    border: 1px solid black;
+}
+
+#customers td,
+#customers th {
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: #555;
+}
+
+.stylebutton {
+    background-color: rgb(64, 171, 243);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#styleselect {
+    width: 170px;
+    height: 40px;
+}
+
+.card {
+    display: inline-block;
+    width: 230px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.headerr {
+    background-color: #4CAF50;
+    color: white;
+    height: 150px;
+    vertical-align: center;
+    padding: 7px;
+    padding-top: 30px;
+    font-size: 14px;
+}
+
+.containerr {
+    font-size: 20px;
+    padding: 3px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height:100%;
+}
+*/

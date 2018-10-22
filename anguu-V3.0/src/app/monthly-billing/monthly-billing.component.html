@@ -1,0 +1,108 @@
+<div id="MonthlyBilling" class="tabcontent">
+    <h3 class="display-4">Monthly Statement</h3>
+
+    <form class="form-inline float-right">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <!--<input type="number" name="month" class="form-control"  required #mnth placeholder="Month" />
+                <input type="number" name="year" class="form-control"  required #yeaar placeholder="Year" />-->
+                <div class="form-group">
+                    <select class="form-control" name="MonthForm" [(ngModel)]="searchMonth">
+                        <!--         <option [value]="month" *ngFor="let month of months">
+                                             {{month}}</option>-->
+                        <option value='0' disabled>--Select Month--</option>
+                        <option value='1'>Janaury</option>
+                        <option value='2'>February</option>
+                        <option value='3'>March</option>
+                        <option value='4'>April</option>
+                        <option value='5'>May</option>
+                        <option value='6'>June</option>
+                        <option value='7'>July</option>
+                        <option value='8'>August</option>
+                        <option value='9'>September</option>
+                        <option value='10'>October</option>
+                        <option value='11'>November</option>
+                        <option value='12'>December</option>
+
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="year" [(ngModel)]="searchYear">
+                        <option value='0' disabled>--Year--</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-primary ml-2 pl-5 pr-5" (click)="doSearch()">
+                    Search</button>
+            </div>
+        </div>
+    </form>
+    <br />
+    <br/>
+    <br/>
+
+
+    <div class="alert alert-warning" *ngIf="!transactions || transactions.length==0">
+        <fa name="exclamation-triangle"></fa> Records could not be found or loaded
+    </div>
+    <div *ngIf="searched">
+        <h2>Transaction :</h2>
+        <br/>
+
+        <div class="row" *ngIf="transactions && transactions.length>0">
+            <div class="col-lg-4 ml-1 mb-1" *ngFor="let t of transactions">
+                <div class="card">
+                    <!--(mouseover)="cf.hidden=false" (mouseleave)="cf.hidden=true">-->
+
+                    <div class="card-body">
+                        <h6 class="card-title">Date of Connection:{{t.transactionDate}}</h6>
+                        <p class="card-text">
+                            Amount: {{t.transactionAmount}}
+                            <br /> Status:{{t.status}}
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div *ngIf="searched==false">
+        <h3>Your Transactions </h3>
+        <table class="table mt-3 centerTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th>TRANSACTION ID</th>
+                    <th>AMOUNT</th>
+                    <th>DESCRIPTION</th>
+                    <th>DATE</th>
+                    <th>STATUS</th>
+                    <th>RECEIPT</th>
+                </tr>
+            </thead>
+            <tr *ngFor="let t of transactions">
+                <td> {{t.transactionId}}</td>
+                <td> {{t.transactionAmount}}</td>
+                <td>EVD Third Party Top up Transaction Id:TP18082</td>
+                <td>{{t.transactionDate | date : "dd-MMM-y" }}</td>
+                <td>{{t.status}}</td>
+                <td>
+                    <button class="btn btn-sml">Download</button>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>

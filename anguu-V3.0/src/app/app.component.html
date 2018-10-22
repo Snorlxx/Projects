@@ -1,0 +1,54 @@
+<head>
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/src/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div id="wrapper" class="toggled">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+                <li>
+
+                    <img [src]="myaccountinfo.gender=='Male'?gentLogo:ladyLogo" alt="My Image" class="img-responsive mt-4 rounded-circle imagee"
+                    />
+                </li>
+                <br/>
+                <li class="sidebar-brand ">
+                    <a class="textt" routerLink="/">MY DETAILS</a>
+                </li>
+                <li class="sidebar-brand ">
+                    <a routerLink="/ap">ACTIVE PLAN</a>
+                </li>
+                <li class="sidebar-brand">
+                    <a routerLink="/mb">MONTHLY BILLS</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper ">
+            <div class="container-fluid ">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/src/vendor/jquery/jquery.min.js "></script>
+    <script src="/src/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+</body>

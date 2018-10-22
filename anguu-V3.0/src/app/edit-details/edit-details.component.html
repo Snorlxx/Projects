@@ -1,0 +1,273 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-sm-9 m-auto">
+      <h3 class="mb-5 mt-5">
+
+        <fa name="user-plus"></fa>
+        Edit Details
+
+      </h3>
+
+      <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend ">
+              <span class="input-group-text fixsize">
+                First Name
+
+              </span>
+            </div>
+            <input type="text" class="form-control" id="fnm" name="fnm" required [(ngModel)]="customer.firstname" #fnm=ngModel placeholder="Enter FirstName"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="(fnm.errors && (fnm.touched || fnm.darty))||(fnm.errors && (fnm.touched || fnm.darty))">
+            <p *ngIf="(fnm.errors && (fnm.touched || fnm.darty))">Please see that Name
+              <strong>
+                <span *ngIf="fnm.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Last Name
+
+              </span>
+            </div>
+            <input type="text" class="form-control" id="lnm" name="lnm" required [(ngModel)]="customer.lastname" #lnm=ngModel placeholder="Enter LastName"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="(lnm.errors && (lnm.touched || lnm.darty))||(lnm.errors && (lnm.touched || lnm.darty))">
+            <p *ngIf="(lnm.errors && (lnm.touched || lnm.darty))">Please see that Name
+              <strong>
+                <span *ngIf="lnm.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Contact No.
+              </span>
+            </div>
+            <input type="number" class="form-control" id="contact" name="contact" [(ngModel)]="customer.contact" #contact=ngModel placeholder="Enter Secondary Contact"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="contact.errors && (contact.touched || contact.darty)">
+            <p>Please see that contact
+              <strong>
+                <span *ngIf="contact.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Email
+              </span>
+            </div>
+            <input type="string" class="form-control" id="email" name="email" [(ngModel)]="customer.email" #email=ngModel placeholder="Enter Email"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="email.errors && (email.touched || email.darty)">
+            <p>Please see that email
+              <strong>
+                <span *ngIf="email.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+
+        <!--Addresss-->
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Flat No.
+              </span>
+            </div>
+            <input type="string" class="form-control" id="flat" name="flat" [(ngModel)]="customer.address.flatNo" #flat=ngModel placeholder="EnterFlatNo"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="flat.errors && (flat.touched || flat.darty)">
+            <p>Please see that flat No.
+              <strong>
+                <span *ngIf="flat.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Landmark
+              </span>
+            </div>
+            <input type="string" class="form-control" id="landmark" name="landmark" [(ngModel)]="customer.address.landmark" #landmark=ngModel
+              placeholder="Enter landmark" />
+          </div>
+          <div class="alert alert-danger" *ngIf="landmark.errors && (landmark.touched || landmark.darty)">
+            <p>Please see that landmark
+              <strong>
+                <span *ngIf="landmark.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Location
+              </span>
+            </div>
+            <input type="string" class="form-control" id="location" name="location" [(ngModel)]="customer.address.location" #location=ngModel
+              placeholder="Enter location" />
+          </div>
+          <div class="alert alert-danger" *ngIf="location.errors && (location.touched || location.darty)">
+            <p>Please see that location
+              <strong>
+                <span *ngIf="location.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Building
+              </span>
+            </div>
+            <input type="string" class="form-control" id="building" name="building" [(ngModel)]="customer.address.building" #building=ngModel
+              placeholder="Enter building" />
+          </div>
+          <div class="alert alert-danger" *ngIf="building.errors && (building.touched || building.darty)">
+            <p>Please see that building
+              <strong>
+                <span *ngIf="building.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                District
+              </span>
+            </div>
+            <input type="string" class="form-control" id="district" name="district" [(ngModel)]="customer.address.district" #district=ngModel
+              placeholder="Enter district" />
+          </div>
+          <div class="alert alert-danger" *ngIf="district.errors && (district.touched || district.darty)">
+            <p>Please see that district
+              <strong>
+                <span *ngIf="district.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                City
+              </span>
+            </div>
+            <input type="string" class="form-control" id="city" name="city" [(ngModel)]="customer.address.city" #city=ngModel placeholder="Enter city"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="city.errors && (city.touched || city.darty)">
+            <p>Please see that city
+              <strong>
+                <span *ngIf="city.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                State
+              </span>
+            </div>
+            <input type="string" class="form-control" id="state" name="state" [(ngModel)]="customer.address.state" #state=ngModel placeholder="Enter state"
+            />
+          </div>
+          <div class="alert alert-danger" *ngIf="state.errors && (state.touched || state.darty)">
+            <p>Please see that state
+              <strong>
+                <span *ngIf="state.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Country
+              </span>
+            </div>
+            <input type="string" class="form-control" id="country" name="country" [(ngModel)]="customer.address.country" #country=ngModel
+              placeholder="Enter country" />
+          </div>
+          <div class="alert alert-danger" *ngIf="country.errors && (country.touched || country.darty)">
+            <p>Please see that country
+              <strong>
+                <span *ngIf="country.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text fixsize">
+                Pincode
+              </span>
+            </div>
+            <input type="string" class="form-control" id="pincode" name="pincode" [(ngModel)]="customer.address.pincode" #pincode=ngModel
+              placeholder="Enter pincode" />
+          </div>
+          <div class="alert alert-danger" *ngIf="pincode.errors && (pincode.touched || pincode.darty)">
+            <p>Please see that pincode
+              <strong>
+                <span *ngIf="pincode.errors.required">is not left blank</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+
+
+        <button class="btn btn-block btn-primary">Save</button>
+
+      </form>
+    </div>
+  </div>
+</div>

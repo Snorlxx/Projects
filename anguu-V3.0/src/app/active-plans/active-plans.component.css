@@ -1,0 +1,16 @@
+.btn-huge{
+    padding-top:10px;
+    padding-bottom:15px;
+    margin-top:30%;
+    margin-left: 150%;
+}
+
+
+.card {
+    display: inline-block;
+    width: 230px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
